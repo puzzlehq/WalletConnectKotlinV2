@@ -44,7 +44,7 @@ afterEvaluate {
                 pom {
                     name.set("WalletConnect ${requireNotNull(extra.get(KEY_SDK_NAME))}")
                     description.set("${requireNotNull(extra.get(KEY_SDK_NAME))} SDK for WalletConnect")
-                    url.set("https://github.com/WalletConnect/WalletConnectKotlinV2")
+                    url.set("https://github.com/puzzlehq/WalletConnectKotlinV2")
 
                     licenses {
                         license {
@@ -68,7 +68,7 @@ afterEvaluate {
                     scm {
                         connection.set("scm:git:git://github.com/WalletConnect/WalletConnectKotlinV2.git")
                         developerConnection.set("scm:git:ssh://github.com/WalletConnect/WalletConnectKotlinV2.git")
-                        url.set("https://github.com/WalletConnect/WalletConnectKotlinV2")
+                        url.set("https://github.com/puzzlehq/WalletConnectKotlinV2")
                     }
                 }
             }
@@ -76,11 +76,12 @@ afterEvaluate {
     }
 }
 
-signing {
-    useInMemoryPgpKeys(
-        System.getenv("SIGNING_KEY_ID"),
-        System.getenv("SIGNING_KEY"),
-        System.getenv("SIGNING_PASSWORD")
-    )
-    sign(publishing.publications)
-}
+//
+//signing {
+//    useInMemoryPgpKeys(
+//        System.getenv("SIGNING_KEY_ID"),
+//        System.getenv("SIGNING_KEY"),
+//        System.getenv("SIGNING_PASSWORD")
+//    )
+//    sign(publishing.publications)
+//}
